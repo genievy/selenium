@@ -17,7 +17,7 @@ def driver(request):
 
 def test_example(driver):
     driver.get("http://www.google.com/")
-    driver.find_element(By., "q").send_keys("webdriver\n") # Эмуляция "Enter" <\n>
+    driver.find_element(By.CSS_SELECTOR, "q").send_keys("webdriver\n") # Эмуляция "Enter" <\n>
     # driver.find_element(By.NAME, "btnK").click()
     WebDriverWait(driver, 30).until(EC.title_is("webdriver - Поиск в Google"))
 
